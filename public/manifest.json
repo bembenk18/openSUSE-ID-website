@@ -1,0 +1,20 @@
+{
+  "short_name": "openSUSE ID",
+  "name": "openSUSE Indonesia Community",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#73ba25",
+  "background_color": "#ffffff"
+}
