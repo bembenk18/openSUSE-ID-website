@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Calendar, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
 import { allBlogPosts } from '../data/blogPosts';
+import ImageWithFallback from '../components/ImageWithFallback';
 
 const BlogPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -116,7 +117,7 @@ const BlogPage = () => {
                   className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden"
                 >
                   <div className="relative overflow-hidden aspect-video">
-                    <img 
+                    <ImageWithFallback
                       src={post.image} 
                       alt={post.title} 
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
