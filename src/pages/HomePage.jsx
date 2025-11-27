@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Download, Users, Zap, Globe, ArrowRight, Calendar } from 'lucide-react';
+import ImageWithFallback from '../components/ImageWithFallback';
 
 const HomePage = () => {
   const blogPosts = [
@@ -130,7 +131,11 @@ const HomePage = () => {
             </div>
             <div className="bg-white rounded-2xl shadow-sm p-8 md:p-12">
               <div className="flex justify-center mb-8">
-                <img src="https://counter.opensuse.org/medium" alt="openSUSE Counter" className="h-24 w-auto" />
+                <ImageWithFallback
+                  src="https://counter.opensuse.org/medium" 
+                  alt="openSUSE Counter" 
+                  className="h-24 w-auto"
+                />
               </div>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 openSUSE adalah distribusi Linux yang stabil, mudah digunakan, dan lengkap. Ditujukan untuk pengguna dan pengembang yang bekerja pada desktop atau server. Sangat bagus untuk pemula, pengguna berpengalaman, dan geek - distribusi yang sempurna untuk semua orang!
@@ -153,7 +158,7 @@ const HomePage = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-sm hover:shadow-xl transition-all p-8 border border-gray-100">
               <div className="flex items-center mb-6">
-                <img 
+                <ImageWithFallback
                   src="https://www.opensuse.org/assets/img/monochrome/leap.svg" 
                   alt="openSUSE Leap" 
                   className="h-20 w-20 object-contain mr-4"
@@ -192,7 +197,7 @@ const HomePage = () => {
 
             <div className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-sm hover:shadow-xl transition-all p-8 border border-gray-100">
               <div className="flex items-center mb-6">
-                <img 
+                <ImageWithFallback
                   src="https://www.opensuse.org/assets/img/monochrome/tumbleweed.svg" 
                   alt="openSUSE Tumbleweed" 
                   className="h-20 w-20 object-contain mr-4"
@@ -256,7 +261,7 @@ const HomePage = () => {
                   className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden"
                 >
                   <div className="relative overflow-hidden aspect-video">
-                    <img 
+                    <ImageWithFallback
                       src={post.image} 
                       alt={post.title} 
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

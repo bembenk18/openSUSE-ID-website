@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
+import ImageWithFallback from '../components/ImageWithFallback';
 
 const TentangOpenSUSE = () => {
   return (
@@ -19,7 +20,11 @@ const TentangOpenSUSE = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-8">
-              <img src="https://counter.opensuse.org/medium" alt="openSUSE Counter" className="h-20" />
+              <ImageWithFallback
+                src="https://counter.opensuse.org/medium" 
+                alt="openSUSE Counter" 
+                className="h-20"
+              />
             </div>
 
             <div className="prose prose-lg max-w-none">

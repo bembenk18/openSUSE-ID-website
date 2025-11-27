@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import ImageWithFallback from './ImageWithFallback';
 
 const Layout = ({ children }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,10 +28,11 @@ const Layout = ({ children }) => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group">
-              <img 
-                src="https://opensuse.id/wp-content/uploads/2016/03/logo-hd-opensuse-id.png" 
+              <ImageWithFallback
+                src="https://raw.githubusercontent.com/opensuse-id/openSUSE-ID-artwork/master/openSUSE-ID-logo/openSUSE-ID-logo.png" 
                 alt="openSUSE.ID" 
                 className="h-10 transition-transform group-hover:scale-105"
+                showIcon={false}
               />
             </Link>
 
@@ -230,10 +232,11 @@ const Layout = ({ children }) => {
         <div className="container mx-auto px-4 py-12">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-2">
-              <img 
-                src="https://opensuse.id/wp-content/uploads/2016/03/logo-hd-opensuse-id.png" 
+              <ImageWithFallback
+                src="https://raw.githubusercontent.com/opensuse-id/openSUSE-ID-artwork/master/openSUSE-ID-logo/openSUSE-ID-logo.png" 
                 alt="openSUSE.ID" 
                 className="h-10 mb-4"
+                showIcon={false}
               />
               <p className="text-gray-400 mb-4 max-w-md">
                 Komunitas openSUSE Indonesia - Mempromosikan penggunaan Linux dan open source di Indonesia.
