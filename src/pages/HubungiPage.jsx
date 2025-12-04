@@ -3,7 +3,7 @@ import { Mail, MapPin } from 'lucide-react';
 
 const HubungiPage = () => {
   return (
-    <div>
+    <div className="bg-white dark:bg-[#0b2220] text-gray-900 dark:text-gray-100">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#73ba25] to-[#5ea01d] text-white py-20">
         <div className="container mx-auto px-4">
@@ -22,38 +22,38 @@ const HubungiPage = () => {
           <div className="max-w-4xl mx-auto">
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Informasi Kontak</h2>
-              <p className="text-gray-700 mb-8 text-center">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">Informasi Kontak</h2>
+              <p className="text-gray-700 dark:text-gray-200 mb-8 text-center">
                 Jangan ragu untuk menghubungi kami melalui email atau bergabung dengan komunitas kami di media sosial.
               </p>
 
               <div className="grid md:grid-cols-2 gap-8 mb-12">
-                <div className="flex items-start bg-white rounded-xl shadow-md p-6">
+                <div className="flex items-start bg-white rounded-xl shadow-md p-6 dark:bg-[#12322f] dark:border dark:border-[#1f4540]">
                   <div className="w-12 h-12 bg-[#73ba25] rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <Mail className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-1">Email</h3>
+                    <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Email</h3>
                     <a href="mailto:humas@opensuse.id" className="text-[#1c9dd9] hover:text-[#1889c0] transition-colors">
                       humas@opensuse.id
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start bg-white rounded-xl shadow-md p-6">
+                <div className="flex items-start bg-white rounded-xl shadow-md p-6 dark:bg-[#12322f] dark:border dark:border-[#1f4540]">
                   <div className="w-12 h-12 bg-[#1c9dd9] rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-1">Lokasi</h3>
-                    <p className="text-gray-700">Indonesia</p>
+                    <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Lokasi</h3>
+                    <p className="text-gray-700 dark:text-gray-200">Indonesia</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Media Links */}
-              <div className="bg-white rounded-xl shadow-lg p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Bergabung dengan Komunitas</h3>
+              <div className="bg-white rounded-xl shadow-lg p-8 dark:bg-[#12322f] dark:border dark:border-[#1f4540]">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">Bergabung dengan Komunitas</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <a 
                     href="https://www.facebook.com/groups/opensuse.indonesia" 
@@ -85,16 +85,16 @@ const HubungiPage = () => {
       </section>
 
       {/* Info Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-[#0b2220]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Pertanyaan Umum?</h2>
-            <p className="text-gray-700 text-lg mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Pertanyaan Umum?</h2>
+            <p className="text-gray-700 dark:text-gray-200 text-lg mb-8">
               Jika Anda memiliki pertanyaan tentang openSUSE atau ingin berkontribusi pada komunitas, 
               jangan ragu untuk menghubungi kami. Kami selalu senang menyambut anggota baru!
             </p>
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <p className="text-gray-600">
+            <div className="bg-white rounded-lg shadow-lg p-8 dark:bg-[#12322f] dark:border dark:border-[#1f4540]">
+              <p className="text-gray-600 dark:text-gray-200">
                 Untuk dukungan teknis dan diskusi, silakan bergabung dengan grup Facebook atau Telegram kami 
                 di mana komunitas aktif siap membantu menjawab pertanyaan Anda.
               </p>

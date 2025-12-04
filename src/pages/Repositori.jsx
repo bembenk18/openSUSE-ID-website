@@ -3,7 +3,7 @@ import { Download, Server, Zap, Shield, ExternalLink } from 'lucide-react';
 
 const Repositori = () => {
   return (
-    <div>
+    <div className="bg-white dark:bg-[#0b2220] text-gray-900 dark:text-gray-100">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#73ba25] to-[#5ea01d] text-white py-8">
         <div className="container mx-auto px-4">
@@ -20,25 +20,25 @@ const Repositori = () => {
       <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Mirror Tersedia</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Mirror Tersedia</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-[#73ba25] flex flex-col h-full">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">download.opensuse.id</h3>
-                <p className="text-gray-700 mb-4 text-sm flex-grow">
+              <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-[#73ba25] flex flex-col h-full dark:bg-[#12322f] dark:border dark:border-[#1f4540] dark:border-t-[#73ba25]">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">download.opensuse.id</h3>
+                <p className="text-gray-700 dark:text-gray-200 mb-4 text-sm flex-grow">
                   Repositori utama untuk openSUSE Leap dan Tumbleweed. Dihosting oleh CloudKilat dengan infrastruktur reliable.
                 </p>
                 <div className="space-y-2 mb-4">
                   <div className="flex items-start">
                     <span className="text-[#73ba25] mr-2 text-sm">✓</span>
-                    <span className="text-gray-700 text-sm">openSUSE Leap 15.x</span>
+                    <span className="text-gray-700 dark:text-gray-200 text-sm">openSUSE Leap 15.x</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-[#73ba25] mr-2 text-sm">✓</span>
-                    <span className="text-gray-700 text-sm">openSUSE Tumbleweed</span>
+                    <span className="text-gray-700 dark:text-gray-200 text-sm">openSUSE Tumbleweed</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-[#73ba25] mr-2 text-sm">✓</span>
-                    <span className="text-gray-700 text-sm">Update Repository</span>
+                    <span className="text-gray-700 dark:text-gray-200 text-sm">Update Repository</span>
                   </div>
                 </div>
                 <a 
@@ -51,32 +51,32 @@ const Repositori = () => {
                 </a>
               </div>
 
-              <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-red-500 opacity-75 flex flex-col h-full">
+              <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-red-500 opacity-75 flex flex-col h-full dark:bg-[#12322f] dark:border dark:border-[#1f4540] dark:border-t-red-500">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-bold text-gray-900">repo.opensuse.id</h3>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">repo.opensuse.id</h3>
                   <span className="px-2 py-1 bg-red-100 text-red-700 text-xs font-bold rounded-full">RETIRED</span>
                 </div>
-                <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-4">
-                  <p className="text-red-800 font-semibold text-sm mb-1">⚠️ Repositori Tidak Aktif</p>
-                  <p className="text-red-700 text-xs">
+                <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-4 dark:bg-red-900/40 dark:border-red-700">
+                  <p className="text-red-800 dark:text-red-200 font-semibold text-sm mb-1">⚠️ Repositori Tidak Aktif</p>
+                  <p className="text-red-700 dark:text-red-200 text-xs">
                     Mirror ini sudah tidak aktif lagi. Silakan gunakan download.opensuse.id sebagai gantinya.
                   </p>
                 </div>
-                <p className="text-gray-500 mb-4 line-through text-sm flex-grow">
+                <p className="text-gray-500 dark:text-gray-300 mb-4 line-through text-sm flex-grow">
                   Mirror alternatif untuk distribusi openSUSE. Tersedia untuk berbagai versi dan arsitektur.
                 </p>
                 <div className="space-y-2 mb-4 opacity-50">
                   <div className="flex items-start">
                     <span className="text-gray-400 mr-2 text-sm">✓</span>
-                    <span className="text-gray-500 text-sm">openSUSE Leap</span>
+                    <span className="text-gray-500 dark:text-gray-300 text-sm">openSUSE Leap</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-gray-400 mr-2 text-sm">✓</span>
-                    <span className="text-gray-500 text-sm">Berbagai Arsitektur</span>
+                    <span className="text-gray-500 dark:text-gray-300 text-sm">Berbagai Arsitektur</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-gray-400 mr-2 text-sm">✓</span>
-                    <span className="text-gray-500 text-sm">ISO Images</span>
+                    <span className="text-gray-500 dark:text-gray-300 text-sm">ISO Images</span>
                   </div>
                 </div>
                 <button 
@@ -87,18 +87,18 @@ const Repositori = () => {
                 </button>
               </div>
 
-              <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-red-500 opacity-75 flex flex-col h-full">
+              <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-red-500 opacity-75 flex flex-col h-full dark:bg-[#12322f] dark:border dark:border-[#1f4540] dark:border-t-red-500">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-bold text-gray-900">twrepo.opensuse.id</h3>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">twrepo.opensuse.id</h3>
                   <span className="px-2 py-1 bg-red-100 text-red-700 text-xs font-bold rounded-full">RETIRED</span>
                 </div>
-                <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-4">
-                  <p className="text-red-800 font-semibold text-sm mb-1">⚠️ Repositori Tidak Aktif</p>
-                  <p className="text-red-700 text-xs">
+                <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-4 dark:bg-red-900/40 dark:border-red-700">
+                  <p className="text-red-800 dark:text-red-200 font-semibold text-sm mb-1">⚠️ Repositori Tidak Aktif</p>
+                  <p className="text-red-700 dark:text-red-200 text-xs">
                     Mirror ini sudah tidak aktif lagi. Silakan gunakan download.opensuse.id untuk Tumbleweed.
                   </p>
                 </div>
-                <p className="text-gray-500 mb-4 line-through text-sm flex-grow">
+                <p className="text-gray-500 dark:text-gray-300 mb-4 line-through text-sm flex-grow">
                   Repositori khusus untuk openSUSE Tumbleweed. Cocok untuk pengguna yang menginginkan update rolling release.
                 </p>
                 <div className="space-y-2 mb-4 opacity-50">
@@ -128,10 +128,10 @@ const Repositori = () => {
       </section>
 
       {/* Download ISO Section */}
-      <section className="py-8 bg-gray-50">
+      <section className="py-8 bg-gray-50 dark:bg-[#0b2220]">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Download ISO</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Download ISO</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-gradient-to-br from-[#73ba25] to-[#5ea01d] text-white rounded-lg shadow-md p-6 border-t-4 border-[#4a8b16] flex flex-col h-full">
                 <h3 className="text-xl font-bold mb-3">openSUSE Leap</h3>
@@ -225,15 +225,15 @@ const Repositori = () => {
       </section>
 
       {/* How to Use Section */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-gray-50 dark:bg-[#0b2220]">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Cara Menggunakan</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">Cara Menggunakan</h2>
             
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Untuk openSUSE Leap</h3>
-                <p className="text-gray-700 mb-3 text-sm">
+              <div className="bg-white rounded-lg shadow-md p-6 dark:bg-[#12322f] dark:border dark:border-[#1f4540]">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">Untuk openSUSE Leap</h3>
+                <p className="text-gray-700 dark:text-gray-200 mb-3 text-sm">
                   Tambahkan repositori lokal menggunakan YaST atau zypper:
                 </p>
                 <div className="bg-gray-900 text-gray-100 rounded-lg p-3 overflow-x-auto">
@@ -249,9 +249,9 @@ sudo zypper ref`}</code>
                 </div>
               </div>
 
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Untuk openSUSE Tumbleweed</h3>
-                <p className="text-gray-700 mb-3 text-sm">
+              <div className="bg-white rounded-lg shadow-md p-6 dark:bg-[#12322f] dark:border dark:border-[#1f4540]">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">Untuk openSUSE Tumbleweed</h3>
+                <p className="text-gray-700 dark:text-gray-200 mb-3 text-sm">
                   Tambahkan repositori Tumbleweed:
                 </p>
                 <div className="bg-gray-900 text-gray-100 rounded-lg p-3 overflow-x-auto">
