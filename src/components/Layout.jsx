@@ -253,7 +253,7 @@ const Layout = ({ children }) => {
                 aria-label="Toggle theme"
               >
                 {theme === 'dark' ? <SunMedium className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-                <span>{theme === 'dark' ? 'Mode Terang' : 'Mode Gelap'}</span>
+                <span>{theme === 'dark' ? 'Tema Terang' : 'Tema Gelap'}</span>
               </button>
             </nav>
           )}
