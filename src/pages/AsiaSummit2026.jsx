@@ -3,7 +3,7 @@ import { Calendar, MapPin, Users, Award, ExternalLink } from 'lucide-react';
 
 const AsiaSummit2026 = () => {
   return (
-    <div>
+    <div className="bg-white dark:bg-[#0b2220] text-gray-900 dark:text-gray-100">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#73ba25] via-[#5ea01d] to-[#4a8b16] text-white py-20">
         <div className="container mx-auto px-4">
@@ -22,30 +22,30 @@ const AsiaSummit2026 = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-[#0b2220]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-sm p-8 md:p-12 mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Tentang openSUSE.Asia Summit 2026</h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            <div className="bg-white rounded-2xl shadow-sm p-8 md:p-12 mb-12 dark:bg-[#12322f] dark:border dark:border-[#1f4540]">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Tentang openSUSE.Asia Summit 2026</h2>
+              <p className="text-lg text-gray-700 dark:text-gray-200 leading-relaxed mb-6">
                 openSUSE.Asia Summit adalah konferensi tahunan yang mempertemukan komunitas openSUSE dan open source di kawasan Asia. Konferensi ini menjadi platform untuk berbagi pengetahuan, pengalaman, dan membangun kolaborasi antar komunitas.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              <p className="text-lg text-gray-700 dark:text-gray-200 leading-relaxed mb-6">
                 Informasi lengkap mengenai openSUSE.Asia Summit 2026 termasuk tanggal, lokasi, tema, dan pendaftaran akan segera diumumkan. Pantau terus website dan media sosial kami untuk update terbaru.
               </p>
             </div>
 
             {/* What to Expect */}
-            <div className="bg-white rounded-2xl shadow-sm p-8 md:p-12 mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Yang Dapat Anda Harapkan</h2>
+            <div className="bg-white rounded-2xl shadow-sm p-8 md:p-12 mb-12 dark:bg-[#12322f] dark:border dark:border-[#1f4540]">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Yang Dapat Anda Harapkan</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-[#73ba25] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <Users className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2">Networking</h3>
-                    <p className="text-gray-600 text-sm">Bertemu dengan kontributor dan pengguna openSUSE dari berbagai negara</p>
+                    <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">Networking</h3>
+                    <p className="text-gray-600 dark:text-gray-200 text-sm">Bertemu dengan kontributor dan pengguna openSUSE dari berbagai negara</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -53,8 +53,8 @@ const AsiaSummit2026 = () => {
                     <Award className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2">Keynote & Talks</h3>
-                    <p className="text-gray-600 text-sm">Presentasi dari expert dan pembicara internasional</p>
+                    <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">Keynote & Talks</h3>
+                    <p className="text-gray-600 dark:text-gray-200 text-sm">Presentasi dari expert dan pembicara internasional</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -62,8 +62,8 @@ const AsiaSummit2026 = () => {
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2">Workshop</h3>
-                    <p className="text-gray-600 text-sm">Sesi hands-on dan tutorial praktis</p>
+                    <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">Workshop</h3>
+                    <p className="text-gray-600 dark:text-gray-200 text-sm">Sesi hands-on dan tutorial praktis</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -71,8 +71,8 @@ const AsiaSummit2026 = () => {
                     <Calendar className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2">Community</h3>
-                    <p className="text-gray-600 text-sm">Diskusi dan kolaborasi dengan komunitas open source</p>
+                    <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">Community</h3>
+                    <p className="text-gray-600 dark:text-gray-200 text-sm">Diskusi dan kolaborasi dengan komunitas open source</p>
                   </div>
                 </div>
               </div>

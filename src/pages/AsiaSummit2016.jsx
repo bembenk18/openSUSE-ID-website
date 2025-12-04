@@ -3,7 +3,7 @@ import { Calendar, MapPin, Users, Award } from 'lucide-react';
 
 const AsiaSummit2016 = () => {
   return (
-    <div>
+    <div className="bg-white dark:bg-[#0b2220] text-gray-900 dark:text-gray-100">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#1c9dd9] via-[#1889c0] to-[#1675a7] text-white py-20">
         <div className="container mx-auto px-4">
@@ -20,42 +20,42 @@ const AsiaSummit2016 = () => {
       </section>
 
       {/* Quick Info */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-white dark:bg-[#0b2220]">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto grid md:grid-cols-4 gap-6">
-            <div className="text-center p-6 bg-gray-50 rounded-xl">
+            <div className="text-center p-6 bg-gray-50 rounded-xl dark:bg-[#12322f] dark:border dark:border-[#1f4540]">
               <Calendar className="h-8 w-8 text-[#1c9dd9] mx-auto mb-3" />
-              <p className="text-sm text-gray-600 mb-1">Tanggal</p>
-              <p className="font-bold text-gray-900">24-25 Sept 2016</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">Tanggal</p>
+              <p className="font-bold text-gray-900 dark:text-gray-100">24-25 Sept 2016</p>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-xl">
+            <div className="text-center p-6 bg-gray-50 rounded-xl dark:bg-[#12322f] dark:border dark:border-[#1f4540]">
               <MapPin className="h-8 w-8 text-[#1c9dd9] mx-auto mb-3" />
-              <p className="text-sm text-gray-600 mb-1">Lokasi</p>
-              <p className="font-bold text-gray-900">Yogyakarta</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">Lokasi</p>
+              <p className="font-bold text-gray-900 dark:text-gray-100">Yogyakarta</p>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-xl">
+            <div className="text-center p-6 bg-gray-50 rounded-xl dark:bg-[#12322f] dark:border dark:border-[#1f4540]">
               <Users className="h-8 w-8 text-[#1c9dd9] mx-auto mb-3" />
-              <p className="text-sm text-gray-600 mb-1">Peserta</p>
-              <p className="font-bold text-gray-900">150+</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">Peserta</p>
+              <p className="font-bold text-gray-900 dark:text-gray-100">150+</p>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-xl">
+            <div className="text-center p-6 bg-gray-50 rounded-xl dark:bg-[#12322f] dark:border dark:border-[#1f4540]">
               <Award className="h-8 w-8 text-[#1c9dd9] mx-auto mb-3" />
-              <p className="text-sm text-gray-600 mb-1">Pembicara</p>
-              <p className="font-bold text-gray-900">25+</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">Pembicara</p>
+              <p className="font-bold text-gray-900 dark:text-gray-100">25+</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-[#0b2220]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-sm p-12 md:p-16 text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <div className="bg-white rounded-2xl shadow-sm p-12 md:p-16 text-center dark:bg-[#12322f] dark:border dark:border-[#1f4540]">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 Informasi Lengkap Konferensi
               </h2>
-              <p className="text-lg text-gray-700 mb-10 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-700 dark:text-gray-200 mb-10 max-w-2xl mx-auto">
                 Lihat informasi lengkap tentang openSUSE.Asia Summit 2016 termasuk jadwal, pembicara, dan materi di website resmi acara.
               </p>
               <a 

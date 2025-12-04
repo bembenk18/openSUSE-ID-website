@@ -35,6 +35,11 @@ html {
   scroll-behavior: smooth;
 }
 
+:root.dark body {
+  background-color: #0b2220;
+  color: #e2e8f0;
+}
+
 /* Performance optimizations */
 * {
   -webkit-font-smoothing: antialiased;

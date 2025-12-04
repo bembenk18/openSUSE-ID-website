@@ -4,7 +4,7 @@ import ImageWithFallback from '../components/ImageWithFallback';
 
 const TentangOpenSUSE = () => {
   return (
-    <div>
+    <div className="bg-white dark:bg-[#0b2220] text-gray-900 dark:text-gray-100">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#73ba25] to-[#5ea01d] text-white py-20">
         <div className="container mx-auto px-4">
@@ -27,8 +27,8 @@ const TentangOpenSUSE = () => {
               />
             </div>
 
-            <div className="prose prose-lg max-w-none">
-              <div className="text-gray-700 leading-relaxed space-y-6 text-lg">
+            <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-li:text-gray-700 dark:prose-invert">
+              <div className="text-gray-700 dark:text-gray-200 leading-relaxed space-y-6 text-lg">
                 <p>
                   Proyek openSUSE adalah kegiatan berskala dunia untuk mempromosikan penggunaan Linux di mana saja. 
                   openSUSE membuat salah satu distribusi Linux terbaik, berkerja bersama-sama secara terbuka, transparan 
@@ -48,9 +48,9 @@ const TentangOpenSUSE = () => {
                 </p>
               </div>
 
-              <div className="mt-16 bg-gray-50 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Fitur Utama openSUSE</h3>
-                <div className="grid md:grid-cols-2 gap-6 text-gray-700">
+              <div className="mt-16 bg-gray-50 rounded-xl p-8 dark:bg-[#12322f]">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Fitur Utama openSUSE</h3>
+                <div className="grid md:grid-cols-2 gap-6 text-gray-700 dark:text-gray-200">
                   <div>
                     <h4 className="font-semibold text-lg mb-2 text-[#73ba25]">YaST - Yet another Setup Tool</h4>
                     <p>Tool konfigurasi sistem yang powerful dan mudah digunakan untuk mengatur seluruh aspek sistem Anda.</p>

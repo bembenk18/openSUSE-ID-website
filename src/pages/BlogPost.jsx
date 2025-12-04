@@ -228,7 +228,7 @@ const BlogPost = () => {
   const post = blogPosts[slug] || blogPosts['repositori-baru-download-opensuse-id'];
 
   return (
-    <div>
+    <div className="bg-white dark:bg-[#0b2220] text-gray-900 dark:text-gray-100">
       {/* Hero Section */}
       <section 
         className="relative h-[400px] flex items-center justify-center text-white"
@@ -265,9 +265,9 @@ const BlogPost = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <article className="prose prose-lg max-w-none">
+            <article className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-li:text-gray-700 dark:prose-invert">
               <div 
-                className="text-gray-700 leading-relaxed blog-content"
+                className="text-gray-700 dark:text-gray-200 leading-relaxed blog-content"
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
             </article>
@@ -276,12 +276,12 @@ const BlogPost = () => {
             <div className="mt-12 pt-8 border-t">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-gray-500">Ditulis oleh</p>
-                  <p className="font-semibold text-gray-900">{post.author}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-300">Ditulis oleh</p>
+                  <p className="font-semibold text-gray-900 dark:text-gray-100">{post.author}</p>
                 </div>
                 <button 
                   onClick={handleShare}
-                  className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors dark:bg-[#12322f] dark:hover:bg-[#0f3834]"
                 >
                   {copied ? (
                     <>

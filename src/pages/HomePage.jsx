@@ -60,11 +60,13 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="bg-white text-gray-900">
+    <div className="bg-white text-gray-900 dark:bg-slate-900 dark:text-gray-100">
       {/* Hero */}
-      <section className="relative overflow-hidden py-16 sm:py-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,#e8f3d9,transparent_35%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_10%,#dff1ff,transparent_30%)]" />
+      <section className="relative overflow-hidden py-16 sm:py-20 dark:bg-[#0b2220] dark:text-gray-50">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,#e8f3d9,transparent_35%)] dark:hidden" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_10%,#dff1ff,transparent_30%)] dark:hidden" />
+        <div className="absolute inset-0 hidden dark:block bg-gradient-to-br from-[#0f3c35] via-[#0b2c29] to-[#0b2220]" />
+        <div className="absolute inset-0 hidden dark:block bg-[radial-gradient(circle_at_20%_30%,#1a6b5a33,transparent_45%)]" />
         <div className="relative container mx-auto px-4">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div className="space-y-8 reveal">
@@ -73,7 +75,7 @@ const HomePage = () => {
                 <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
                   Komunitas openSUSE Indonesia
                 </h1>
-                <p className="text-lg text-gray-600 max-w-xl">
+                <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl">
                   Bergabunglah dengan komunitas Linux terbesar di Indonesia. Belajar, berbagi, dan berkembang bersama.
                 </p>
               </div>
@@ -91,7 +93,7 @@ const HomePage = () => {
                   href="https://t.me/openSUSE_ID"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-gray-200 px-5 py-3 font-semibold text-gray-800 hover:border-gray-300 hover:bg-gray-50 transition"
+                  className="inline-flex items-center gap-2 rounded-lg border border-gray-200 px-5 py-3 font-semibold text-gray-800 hover:border-gray-300 hover:bg-gray-50 transition dark:border-[#1f4540] dark:text-gray-100 dark:hover:bg-[#12322f]"
                 >
                   Telegram Group
                   <ArrowRight className="h-4 w-4" />
@@ -99,13 +101,13 @@ const HomePage = () => {
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {stats.map(({ label, value, icon: Icon }) => (
-                  <div key={label} className="rounded-xl border border-gray-100 bg-white/80 px-4 py-3 shadow-sm">
+                  <div key={label} className="rounded-xl border border-gray-100 bg-white/80 px-4 py-3 shadow-sm dark:border-[#1f4540] dark:bg-[#12322f]/80">
                     <div className="flex items-center gap-3">
-                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#73ba25]/10 text-[#73ba25]">
+                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#73ba25]/10 text-[#73ba25] dark:bg-[#73ba25]/20">
                         <Icon className="h-5 w-5" />
                       </span>
                       <div>
-                        <p className="text-xs uppercase tracking-wide text-gray-500">{label}</p>
+                        <p className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-300">{label}</p>
                         <p className="text-lg font-semibold">{value}</p>
                       </div>
                     </div>
@@ -116,20 +118,20 @@ const HomePage = () => {
             <div className="relative reveal">
               <div className="absolute -top-6 -left-6 h-16 w-16 rounded-2xl bg-[#73ba25]/10 blur-xl" />
               <div className="absolute -bottom-10 -right-6 h-24 w-24 rounded-full bg-[#1c9dd9]/10 blur-2xl" />
-              <div className="relative overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
-                <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
-                <div className="flex items-center gap-3">
-                  <div className="space-y-0.5">
-                    <p className="text-sm text-gray-500">Rilis aktif</p>
-                    <p className="font-semibold">Leap & Tumbleweed</p>
+              <div className="relative overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl dark:border-[#1f4540] dark:bg-[#12322f]">
+                <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 dark:border-[#1f4540]">
+                  <div className="flex items-center gap-3">
+                    <div className="space-y-0.5">
+                      <p className="text-sm text-gray-500 dark:text-gray-300">Rilis aktif</p>
+                      <p className="font-semibold text-gray-900 dark:text-gray-100">Leap & Tumbleweed</p>
+                    </div>
                   </div>
-                </div>
-                <Sparkles className="h-5 w-5 text-[#73ba25]" />
+                  <Sparkles className="h-5 w-5 text-[#73ba25]" />
                 </div>
                 <div className="grid gap-2 p-6">
-                  <div className="flex items-center justify-between rounded-xl border border-gray-100 px-4 py-3 transition hover:border-[#73ba25]/20 hover:shadow-sm hover:bg-[#73ba25]/5">
+                  <div className="flex items-center justify-between rounded-xl border border-gray-100 px-4 py-3 transition hover:border-[#73ba25]/20 hover:shadow-sm hover:bg-[#73ba25]/5 dark:border-[#1f4540] dark:hover:bg-[#15403b]">
                     <div className="flex items-center gap-3">
-                      <span className="h-10 w-10 inline-flex items-center justify-center rounded-lg bg-[#73ba25]/10">
+                      <span className="h-10 w-10 inline-flex items-center justify-center rounded-lg bg-[#73ba25]/10 dark:bg-[#73ba25]/20">
                         <ImageWithFallback
                           src="https://www.opensuse.org/assets/img/monochrome/leap.svg"
                           alt="Leap"
@@ -137,7 +139,7 @@ const HomePage = () => {
                         />
                       </span>
                       <div>
-                        <p className="text-sm text-gray-500">Stable</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-300">Stable</p>
                         <p className="font-semibold">openSUSE Leap</p>
                       </div>
                     </div>
@@ -150,9 +152,9 @@ const HomePage = () => {
                       Download
                     </a>
                   </div>
-                  <div className="flex items-center justify-between rounded-xl border border-gray-100 px-4 py-3 transition hover:border-[#1c9dd9]/20 hover:shadow-sm hover:bg-[#1c9dd9]/5">
+                  <div className="flex items-center justify-between rounded-xl border border-gray-100 px-4 py-3 transition hover:border-[#1c9dd9]/20 hover:shadow-sm hover:bg-[#1c9dd9]/5 dark:border-[#1f4540] dark:hover:bg-[#123e45]">
                     <div className="flex items-center gap-3">
-                      <span className="h-10 w-10 inline-flex items-center justify-center rounded-lg bg-[#1c9dd9]/10">
+                      <span className="h-10 w-10 inline-flex items-center justify-center rounded-lg bg-[#1c9dd9]/10 dark:bg-[#1c9dd9]/20">
                         <ImageWithFallback
                           src="https://www.opensuse.org/assets/img/monochrome/tumbleweed.svg"
                           alt="Tumbleweed"
@@ -160,7 +162,7 @@ const HomePage = () => {
                         />
                       </span>
                       <div>
-                        <p className="text-sm text-gray-500">Rolling</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-300">Rolling</p>
                         <p className="font-semibold">openSUSE Tumbleweed</p>
                       </div>
                     </div>
@@ -181,17 +183,17 @@ const HomePage = () => {
       </section>
 
       {/* Highlight */}
-      <section className="py-14 sm:py-16 border-t border-gray-100">
+      <section className="py-12 sm:py-14 border-t border-gray-100 dark:border-[#1f4540]">
         <div className="container mx-auto px-4">
           <div className="flex flex-col gap-4 mb-10 reveal">
             <div className="space-y-3">
               <p className="text-sm font-semibold text-[#73ba25]">Kenapa openSUSE?</p>
               <h2 className="text-3xl font-bold">Distribusi Linux Terbaik</h2>
-              <p className="text-gray-600 max-w-2xl">
+              <p className="text-gray-600 dark:text-gray-300 max-w-2xl">
                 openSUSE adalah distribusi Linux stabil yang tetap mudah dipakai. Cocok untuk desktop maupun server,
                 nyaman untuk pemula, kuat untuk pengguna berpengalaman, dan fleksibel untuk developer.
               </p>
-              <p className="text-gray-600 max-w-2xl">
+              <p className="text-gray-600 dark:text-gray-300 max-w-2xl">
                 Proyek ini dibangun terbuka dan transparan bersama komunitas FOSS global, sehingga pembaruan, dokumentasi,
                 dan dukungan komunitas selalu tersedia.
               </p>
@@ -205,7 +207,7 @@ const HomePage = () => {
             </div>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="group reveal rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+            <div className="group reveal rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-[#1f4540] dark:bg-[#12322f]">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
                   <ImageWithFallback
@@ -219,9 +221,9 @@ const HomePage = () => {
                 </div>
                 <span className="rounded-full bg-[#73ba25]/10 px-3 py-1 text-xs font-semibold text-[#73ba25]">Stable release</span>
               </div>
-              <p className="text-gray-700">Distribusi stabil dengan dukungan jangka panjang, ideal untuk produksi, server, dan enterprise. Kemudahan migrasi ke tingkat korporasi.</p>
+              <p className="text-gray-700 dark:text-gray-200">Distribusi stabil dengan dukungan jangka panjang, ideal untuk produksi, server, dan enterprise. Kemudahan migrasi ke tingkat korporasi.</p>
               <br />
-              <ul className="space-y-3 text-gray-700">
+              <ul className="space-y-3 text-gray-700 dark:text-gray-200">
                 <li className="flex items-start gap-3">
                   <span className="mt-1 h-2 w-2 rounded-full bg-[#73ba25]" />
                   <span>Basis rilis stabil untuk desktop dan server.</span>
@@ -247,7 +249,7 @@ const HomePage = () => {
                 </a>
               </div>
             </div>
-            <div className="group reveal rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+            <div className="group reveal rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-[#1f4540] dark:bg-[#12322f]">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
                   <ImageWithFallback
@@ -261,9 +263,9 @@ const HomePage = () => {
                 </div>
                 <span className="rounded-full bg-[#1c9dd9]/10 px-3 py-1 text-xs font-semibold text-[#1c9dd9]">Rolling Release</span>
               </div>
-              <p className="text-gray-700">Distribusi rolling release dengan software terbaru. Ditujukan untuk pengguna yang menginginkan teknologi cutting-edge dan update berkelanjutan.</p>
+              <p className="text-gray-700 dark:text-gray-200">Distribusi rolling release dengan software terbaru. Ditujukan untuk pengguna yang menginginkan teknologi cutting-edge dan update berkelanjutan.</p>
               <br />
-              <ul className="space-y-3 text-gray-700">
+              <ul className="space-y-3 text-gray-700 dark:text-gray-200">
                 <li className="flex items-start gap-3">
                   <span className="mt-1 h-2 w-2 rounded-full bg-[#1c9dd9]" />
                   <span>Update cepat dengan QA otomatis openQA.</span>
@@ -295,12 +297,12 @@ const HomePage = () => {
       </section>
 
       {/* Blog */}
-      <section className="py-14 sm:py-16 border-t border-gray-100">
+      <section className="py-12 sm:py-14 border-t border-gray-100">
         <div className="container mx-auto px-4">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-8">
             <div>
               <h2 className="text-3xl font-bold">Berita & artikel</h2>
-              <p className="text-gray-600">Kegiatan komunitas, panduan, dan rilis terbaru.</p>
+              <p className="text-gray-600 dark:text-gray-300">Kegiatan komunitas, panduan, dan rilis terbaru.</p>
             </div>
             <Link
               to="/blog"
@@ -315,7 +317,7 @@ const HomePage = () => {
               <Link
                 key={post.id}
                 to={`/blog/${post.slug}`}
-                className="group rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                className="group rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-[#1f4540] dark:bg-[#12322f]"
               >
                 <div className="aspect-video overflow-hidden rounded-t-2xl bg-gray-50">
                   <ImageWithFallback
@@ -327,13 +329,13 @@ const HomePage = () => {
                 <div className="space-y-3 p-5">
                   <div className="flex items-center gap-2 text-xs font-semibold text-[#73ba25]">
                     <span className="rounded-full bg-[#73ba25]/10 px-3 py-1">{post.category}</span>
-                    <div className="flex items-center text-gray-500">
+                    <div className="flex items-center text-gray-500 dark:text-gray-300">
                       <Calendar className="mr-2 h-4 w-4" />
                       {post.date}
                     </div>
                   </div>
                   <h3 className="text-lg font-semibold leading-snug group-hover:text-[#73ba25]">{post.title}</h3>
-                  <p className="text-sm text-gray-600 line-clamp-3">{post.excerpt}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-3">{post.excerpt}</p>
                 </div>
               </Link>
             ))}
@@ -342,14 +344,14 @@ const HomePage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 border-t border-gray-100">
+      <section className="py-12 border-t border-gray-100 dark:border-[#1f4540]">
         <div className="container mx-auto px-4">
-          <div className="rounded-3xl border border-gray-100 bg-gradient-to-r from-white to-[#f4f9ed] px-8 py-10 shadow-sm sm:px-12 reveal">
+          <div className="rounded-3xl border border-gray-100 bg-gradient-to-r from-white to-[#f4f9ed] px-8 py-10 shadow-sm sm:px-12 reveal dark:border-[#1f4540] dark:from-[#0f3c35] dark:to-[#0b2c29]">
             <div className="flex flex-col items-start gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div className="space-y-3">
                 <p className="text-sm font-semibold text-[#73ba25]">Siap Coba openSUSE?</p>
                 <h3 className="text-2xl sm:text-3xl font-bold">Download dari mirror lokal untuk kecepatan maksimal</h3>
-                <p className="text-gray-600 max-w-2xl">
+                <p className="text-gray-600 dark:text-gray-300 max-w-2xl">
                   Pilih rilis yang pas, unduh dari Indonesia, lalu bergabung dengan komunitas untuk dukungan sehari-hari.
                 </p>
               </div>
@@ -365,7 +367,7 @@ const HomePage = () => {
                 </a>
                 <Link
                   to="/repositori"
-                  className="inline-flex items-center gap-2 rounded-lg border border-gray-200 px-5 py-3 font-semibold text-gray-800 hover:border-gray-300 hover:bg-gray-50 transition"
+                  className="inline-flex items-center gap-2 rounded-lg border border-gray-200 px-5 py-3 font-semibold text-gray-800 hover:border-gray-300 hover:bg-gray-50 transition dark:border-[#1f4540] dark:text-gray-100 dark:hover:bg-[#12322f]"
                 >
                   Info repositori
                 </Link>

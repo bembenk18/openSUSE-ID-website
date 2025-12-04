@@ -54,13 +54,13 @@ const BlogPage = () => {
       </section>
 
       {/* Modern Category Filter */}
-      <section className="bg-white sticky top-16 z-40 shadow-sm">
+      <section className="bg-white dark:bg-[#12322f] sticky top-16 z-40 shadow-sm dark:shadow-none dark:border-b dark:border-[#1f4540]">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-3 py-4 overflow-x-auto scrollbar-hide">
             <Link 
               to="/blog" 
               className={`px-5 py-2 rounded-xl font-semibold transition-all whitespace-nowrap ${
-                !category ? 'bg-[#73ba25] text-white shadow-lg' : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
+                !category ? 'bg-[#73ba25] text-white shadow-lg' : 'bg-gray-50 text-gray-700 hover:bg-gray-100 dark:bg-[#0f3834] dark:text-gray-200 dark:hover:bg-[#12322f]'
               }`}
             >
               Semua
@@ -68,7 +68,7 @@ const BlogPage = () => {
             <Link 
               to="/blog?category=kegiatan" 
               className={`px-5 py-2 rounded-xl font-semibold transition-all whitespace-nowrap ${
-                category === 'kegiatan' ? 'bg-[#73ba25] text-white shadow-lg' : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
+                category === 'kegiatan' ? 'bg-[#73ba25] text-white shadow-lg' : 'bg-gray-50 text-gray-700 hover:bg-gray-100 dark:bg-[#0f3834] dark:text-gray-200 dark:hover:bg-[#12322f]'
               }`}
             >
               Kegiatan
@@ -76,7 +76,7 @@ const BlogPage = () => {
             <Link 
               to="/blog?category=komunitas" 
               className={`px-5 py-2 rounded-xl font-semibold transition-all whitespace-nowrap ${
-                category === 'komunitas' ? 'bg-[#73ba25] text-white shadow-lg' : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
+                category === 'komunitas' ? 'bg-[#73ba25] text-white shadow-lg' : 'bg-gray-50 text-gray-700 hover:bg-gray-100 dark:bg-[#0f3834] dark:text-gray-200 dark:hover:bg-[#12322f]'
               }`}
             >
               Komunitas
@@ -84,7 +84,7 @@ const BlogPage = () => {
             <Link 
               to="/blog?category=panduan" 
               className={`px-5 py-2 rounded-xl font-semibold transition-all whitespace-nowrap ${
-                category === 'panduan' ? 'bg-[#73ba25] text-white shadow-lg' : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
+                category === 'panduan' ? 'bg-[#73ba25] text-white shadow-lg' : 'bg-gray-50 text-gray-700 hover:bg-gray-100 dark:bg-[#0f3834] dark:text-gray-200 dark:hover:bg-[#12322f]'
               }`}
             >
               Panduan
@@ -92,7 +92,7 @@ const BlogPage = () => {
             <Link 
               to="/blog?category=wajah-opensuse-id" 
               className={`px-5 py-2 rounded-xl font-semibold transition-all whitespace-nowrap ${
-                category === 'wajah-opensuse-id' ? 'bg-[#73ba25] text-white shadow-lg' : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
+                category === 'wajah-opensuse-id' ? 'bg-[#73ba25] text-white shadow-lg' : 'bg-gray-50 text-gray-700 hover:bg-gray-100 dark:bg-[#0f3834] dark:text-gray-200 dark:hover:bg-[#12322f]'
               }`}
             >
               Wajah openSUSE
@@ -102,19 +102,19 @@ const BlogPage = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-gray-50 dark:bg-[#0b2220]">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900">{categoryName}</h2>
-              <p className="text-gray-600 mt-1">{filteredPosts.length} artikel ditemukan</p>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{categoryName}</h2>
+              <p className="text-gray-600 dark:text-gray-300 mt-1">{filteredPosts.length} artikel ditemukan</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {currentPosts.map((post) => (
                 <Link 
                   key={post.id}
                   to={`/blog/${post.slug}`}
-                  className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden"
+                  className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden dark:bg-[#12322f] dark:border dark:border-[#1f4540]"
                 >
                   <div className="relative overflow-hidden aspect-video">
                     <ImageWithFallback
@@ -129,14 +129,14 @@ const BlogPage = () => {
                     </div>
                   </div>
                   <div className="p-6">
-                    <div className="flex items-center text-sm text-gray-500 mb-3">
+                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-300 mb-3">
                       <Calendar className="h-4 w-4 mr-2" />
                       {post.date}
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#73ba25] transition-colors line-clamp-2">
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-[#73ba25] transition-colors line-clamp-2">
                       {post.title}
                     </h3>
-                    <p className="text-gray-600 text-sm line-clamp-2">{post.excerpt}</p>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm line-clamp-2">{post.excerpt}</p>
                   </div>
                 </Link>
               ))}

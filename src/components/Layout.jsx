@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, SunMedium, Moon } from 'lucide-react';
 import ImageWithFallback from './ImageWithFallback';
 
 const Layout = ({ children }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [theme, setTheme] = useState(() => {
+    if (typeof window === 'undefined') return 'light';
+    const stored = localStorage.getItem('theme');
+    if (stored) return stored;
+    return 'light'; // default terang
+  });
   const location = useLocation();
 
   useEffect(() => {
@@ -16,13 +22,23 @@ const Layout = ({ children }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const root = document.documentElement;
+    root.classList.toggle('dark', theme === 'dark');
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  };
+
   const isActive = (path) => location.pathname === path;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-[#0b2220] dark:text-gray-100">
       {/* Modern Header */}
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-white'
+        scrolled ? 'bg-white/90 dark:bg-[#0b2220]/90 backdrop-blur-sm shadow-md' : 'bg-white dark:bg-[#0b2220]'
       }`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
@@ -43,7 +59,7 @@ const Layout = ({ children }) => {
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${
                   isActive('/') 
                     ? 'bg-[#73ba25] text-white' 
-                    : 'text-gray-700 hover:bg-gray-100'
+                    : 'text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-[#12322f]'
                 }`}
               >
                 Beranda
@@ -53,7 +69,7 @@ const Layout = ({ children }) => {
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${
                   isActive('/tentang-opensuse') 
                     ? 'bg-[#73ba25] text-white' 
-                    : 'text-gray-700 hover:bg-gray-100'
+                    : 'text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-[#12322f]'
                 }`}
               >
                 Tentang openSUSE
@@ -63,62 +79,62 @@ const Layout = ({ children }) => {
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${
                   isActive('/tentang-kami') 
                     ? 'bg-[#73ba25] text-white' 
-                    : 'text-gray-700 hover:bg-gray-100'
+                    : 'text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-[#12322f]'
                 }`}
               >
                 Tentang Kami
               </Link>
               <div className="relative group">
-                <button className="px-4 py-2 rounded-lg font-medium text-gray-700 hover:bg-gray-100 transition-all flex items-center">
+                <button className="px-4 py-2 rounded-lg font-medium text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-[#12322f] transition-all flex items-center">
                   Blog <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
-                <div className="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100">
+                <div className="absolute left-0 mt-2 w-56 bg-white dark:bg-[#12322f] rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100 dark:border-[#1f4540]">
                   <Link 
                     to="/blog" 
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors rounded-t-xl"
+                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-[#0f3834] transition-colors rounded-t-xl"
                   >
                     Semua Artikel
                   </Link>
                   <Link 
                     to="/blog?category=panduan" 
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors"
+                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-[#0f3834] transition-colors"
                   >
                     Panduan
                   </Link>
                   <Link 
                     to="/blog?category=kegiatan" 
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors"
+                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-[#0f3834] transition-colors"
                   >
                     Kegiatan
                   </Link>
                   <Link 
                     to="/blog?category=wajah-opensuse-id" 
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors rounded-b-xl"
+                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-[#0f3834] transition-colors rounded-b-xl"
                   >
                     Wajah openSUSE.ID
                   </Link>
                 </div>
               </div>
               <div className="relative group">
-                <button className="px-4 py-2 rounded-lg font-medium text-gray-700 hover:bg-gray-100 transition-all flex items-center">
+                <button className="px-4 py-2 rounded-lg font-medium text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-[#12322f] transition-all flex items-center">
                   Konferensi <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
-                <div className="absolute left-0 mt-2 w-64 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100">
+                <div className="absolute left-0 mt-2 w-64 bg-white dark:bg-[#12322f] rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100 dark:border-[#1f4540]">
                   <Link 
                     to="/konferensi/opensuse-asia-summit-2016" 
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors rounded-t-xl"
+                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-[#0f3834] transition-colors rounded-t-xl"
                   >
                     openSUSE.Asia Summit 2016
                   </Link>
                   <Link 
                     to="/konferensi/opensuse-asia-summit-2019" 
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors"
+                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-[#0f3834] transition-colors"
                   >
                     openSUSE.Asia Summit 2019
                   </Link>
                   <Link 
                     to="/konferensi/opensuse-asia-summit-2026" 
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors rounded-b-xl"
+                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-[#0f3834] transition-colors rounded-b-xl"
                   >
                     openSUSE.Asia Summit 2026
                   </Link>
@@ -129,17 +145,26 @@ const Layout = ({ children }) => {
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${
                   isActive('/repositori') 
                     ? 'bg-[#73ba25] text-white' 
-                    : 'text-gray-700 hover:bg-gray-100'
+                    : 'text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-[#12322f]'
                 }`}
               >
                 Repositori
               </Link>
-              <Link 
-                to="/hubungi" 
-                className="ml-2 px-6 py-2 bg-[#1c9dd9] hover:bg-[#1889c0] text-white font-medium rounded-lg transition-all transform hover:scale-105 shadow-sm"
-              >
-                Hubungi
-              </Link>
+              <div className="flex items-center gap-2">
+                <Link 
+                  to="/hubungi" 
+                  className="ml-2 px-6 py-2 bg-[#1c9dd9] hover:bg-[#1889c0] text-white font-medium rounded-lg transition-all transform hover:scale-105 shadow-sm"
+                >
+                  Hubungi
+                </Link>
+                <button
+                  onClick={toggleTheme}
+                  className="inline-flex items-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-gray-700 transition hover:bg-gray-100 dark:border-[#1f4540] dark:bg-[#12322f] dark:text-gray-100 dark:hover:bg-[#0f3834]"
+                  aria-label="Toggle theme"
+                >
+                  {theme === 'dark' ? <SunMedium className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+                </button>
+              </div>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -156,62 +181,62 @@ const Layout = ({ children }) => {
             <nav className="lg:hidden py-4 border-t">
               <Link 
                 to="/" 
-                className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-slate-800 rounded-lg transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Beranda
               </Link>
               <Link 
                 to="/tentang-opensuse" 
-                className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+                className="block px-4 py-3 text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-[#12322f] rounded-lg transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Tentang openSUSE
               </Link>
               <Link 
                 to="/tentang-kami" 
-                className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+                className="block px-4 py-3 text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-[#12322f] rounded-lg transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Tentang Kami
               </Link>
               <Link 
                 to="/blog" 
-                className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+                className="block px-4 py-3 text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-[#12322f] rounded-lg transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Blog
               </Link>
               <div className="border-t border-gray-200 my-2"></div>
               <p className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">Konferensi</p>
-              <Link 
-                to="/konferensi/opensuse-asia-summit-2016" 
-                className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                openSUSE.Asia Summit 2016
-              </Link>
-              <Link 
-                to="/konferensi/opensuse-asia-summit-2019" 
-                className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                openSUSE.Asia Summit 2019
-              </Link>
-              <Link 
-                to="/konferensi/opensuse-asia-summit-2026" 
-                className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                openSUSE.Asia Summit 2026
-              </Link>
-              <Link 
-                to="/repositori" 
-                className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Repositori
-              </Link>
+                <Link 
+                  to="/konferensi/opensuse-asia-summit-2016" 
+                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-[#12322f] rounded-lg transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  openSUSE.Asia Summit 2016
+                </Link>
+                <Link 
+                  to="/konferensi/opensuse-asia-summit-2019" 
+                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-[#12322f] rounded-lg transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  openSUSE.Asia Summit 2019
+                </Link>
+                <Link 
+                  to="/konferensi/opensuse-asia-summit-2026" 
+                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-[#12322f] rounded-lg transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  openSUSE.Asia Summit 2026
+                </Link>
+                <Link 
+                  to="/repositori" 
+                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-[#12322f] rounded-lg transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Repositori
+                </Link>
               <Link 
                 to="/hubungi" 
                 className="block px-4 py-3 bg-[#1c9dd9] text-white hover:bg-[#1889c0] rounded-lg transition-colors mx-4 mt-2 text-center font-medium"
@@ -219,16 +244,27 @@ const Layout = ({ children }) => {
               >
                 Hubungi
               </Link>
+              <button
+                onClick={() => {
+                  toggleTheme();
+                  setMobileMenuOpen(false);
+                }}
+                className="mt-4 mx-4 inline-flex w-[calc(100%-2rem)] items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-gray-700 transition hover:bg-gray-100 dark:border-[#1f4540] dark:bg-[#12322f] dark:text-gray-100 dark:hover:bg-[#0f3834]"
+                aria-label="Toggle theme"
+              >
+                {theme === 'dark' ? <SunMedium className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+                <span>{theme === 'dark' ? 'Mode Terang' : 'Mode Gelap'}</span>
+              </button>
             </nav>
           )}
         </div>
       </header>
 
       {/* Main Content with padding for fixed header */}
-      <main className="pt-16">{children}</main>
+      <main className="pt-16 bg-gray-50 dark:bg-[#0b2220] text-gray-900 dark:text-gray-100">{children}</main>
 
       {/* Modern Footer */}
-      <footer className="bg-gray-900 text-white mt-20">
+      <footer className="bg-gray-900 text-white mt-12">
         <div className="container mx-auto px-4 py-12">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-2">
@@ -288,7 +324,7 @@ const Layout = ({ children }) => {
               </nav>
             </div>
           </div>
-          <div className="pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+            <div className="pt-6 border-t border-gray-800 text-center text-gray-400 text-sm">
             <p>&copy; {new Date().getFullYear()} openSUSE Indonesia. All rights reserved.</p>
           </div>
         </div>
