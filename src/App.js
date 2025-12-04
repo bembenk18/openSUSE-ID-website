@@ -10,6 +10,7 @@ import HubungiPage from './pages/HubungiPage';
 import AsiaSummit2016 from './pages/AsiaSummit2016';
 import AsiaSummit2019 from './pages/AsiaSummit2019';
 import AsiaSummit2026 from './pages/AsiaSummit2026';
+import NotFound from './pages/NotFound';
 import Layout from './components/Layout';
 import { Toaster } from './components/ui/toaster';
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="/konferensi/opensuse-asia-summit-2016" element={<AsiaSummit2016 />} />
             <Route path="/konferensi/opensuse-asia-summit-2019" element={<AsiaSummit2019 />} />
             <Route path="/konferensi/opensuse-asia-summit-2026" element={<AsiaSummit2026 />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
         <Toaster />
