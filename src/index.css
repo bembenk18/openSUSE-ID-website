@@ -101,9 +101,6 @@ a:has(> img[alt*="Emergent"]) {
 
 /* ================================================================
    BLOG CONTENT STYLES
-   Mengembalikan styling HTML bawaan browser yang direset oleh
-   Tailwind Preflight, khusus untuk konten artikel yang dirender
-   via dangerouslySetInnerHTML di BlogPost.jsx
    ================================================================ */
 
 /* Headings */
@@ -148,11 +145,7 @@ a:has(> img[alt*="Emergent"]) {
   line-height: 1.8;
 }
 
-/* Links - masalah utama yang dilaporkan */
-/* Style tautan dipakai bersama:
-   - .blog-content  → konten artikel blog (juga mengatur heading, list, dll.)
-   - .content-links → halaman lain (mis. Kode Etik) yang hanya butuh style tautan
-                      tanpa mengubah margin/tipografi elemen lain */
+/* Links */
 .blog-content a,
 .content-links a {
   color: #73ba25;
@@ -167,7 +160,7 @@ a:has(> img[alt*="Emergent"]) {
   color: #5a9a1a;
 }
 
-/* URL panjang (mis. tautan Fedora/GNOME) tidak meluber di layar kecil */
+/* Long URL */
 .content-links a {
   overflow-wrap: anywhere;
 }
