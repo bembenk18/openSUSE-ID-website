@@ -16,7 +16,7 @@ const KodeEtik = () => {
 
       {/* Main Content */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 content-links">
           <div className="max-w-4xl mx-auto">
             <div className="text-gray-700 leading-relaxed space-y-6 text-lg mb-16">
               <p>
@@ -248,10 +248,10 @@ const KodeEtik = () => {
               <h3 className="text-3xl font-bold text-gray-900 mb-6">Pihak yang Harus Dihubungi</h3>
               <div className="space-y-4 text-gray-700">
                 <div className="flex items-start">
-                  <p>Setiap orang yang memiliki masalah atau pertanyaan tentang potensi pelanggaran Kode Etik dapat menyampaikannya dengan menghubungi melalui surel di <a href="mailto:humas@opensuse.id">humas@opensuse.id</a> atau menghubungi admin masing-masing kanal saluran openSUSE Indonesia secara pribadi (Telegram, Facebook, Instagram, X, YouTube, Threads, dan Fediverse).</p>
+                  <p>Setiap orang yang memiliki masalah atau pertanyaan tentang potensi pelanggaran Kode Etik dapat menyampaikannya dengan menghubungi melalui surel di <a href="mailto:humas@opensuse.id">humas@opensuse.id</a>, menghubungi admin masing-masing kanal saluran openSUSE Indonesia secara pribadi (Telegram, Facebook, Instagram, X, YouTube, Threads, dan Fediverse), atau menghubungi panitia lokal (untuk acara konferensi, hackfest, pesta rilis, lokakarya, dan acara kecil lainnya).</p>
                 </div>
                 <div className="flex items-start">
-                  <p>Hal ini berlaku dalam segala kondisi. Apabila Anda merasa bahwa masalah tersebut tidak diselesaikan, Anda dapat mengajukan permohonan peninjauan ulang kepada <a href="https://en.opensuse.org/openSUSE:Board" target="_blank">openSUSE board</a> dengan membuat laporan yang sama.</p>
+                  <p>Hal ini berlaku dalam segala kondisi. Apabila Anda merasa bahwa masalah tersebut tidak diselesaikan, Anda dapat mengajukan permohonan peninjauan ulang kepada <a href="https://en.opensuse.org/openSUSE:Board" target="_blank" rel="noopener noreferrer">openSUSE board</a> dengan membuat laporan yang sama.</p>
                 </div>
               </div>
             </div>
@@ -264,13 +264,13 @@ const KodeEtik = () => {
                   <p>Kode Etik ini diturunkan dari dokumen Kode Etik Proyek Fedora dan Proyek GNOME.</p>
                 </div>
                 <div className="flex items-start">
-                  <p>Kode Etik Proyek Fedora: <a href="https://docs.fedoraproject.org/en-US/project/code-of-conduct/" target="_blank">https://docs.fedoraproject.org/en-US/project/code-of-conduct/</a></p>
+                  <p>Kode Etik Proyek Fedora: <a href="https://docs.fedoraproject.org/en-US/project/code-of-conduct/" target="_blank" rel="noopener noreferrer">https://docs.fedoraproject.org/en-US/project/code-of-conduct/</a></p>
                 </div>
                 <div className="flex items-start">
-                  <p>Kode Etik Proyek GNOME: <a href="https://wiki.gnome.org/Foundation/CodeOfConduct" target="_blank">https://wiki.gnome.org/Foundation/CodeOfConduct</a></p>
+                  <p>Kode Etik Proyek GNOME: <a href="https://wiki.gnome.org/Foundation/CodeOfConduct" target="_blank" rel="noopener noreferrer">https://wiki.gnome.org/Foundation/CodeOfConduct</a></p>
                 </div>
                 <div className="flex items-start">
-                  <p>Dokumen ini dilisensikan di bawah <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode.id" target="_blank">Lisensi Creative Commons Atribusi-BerbagiSerupa 4.0 Internasional.</a></p>
+                  <p>Dokumen ini dilisensikan di bawah <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode.id" target="_blank" rel="noopener noreferrer">Lisensi Creative Commons Atribusi-BerbagiSerupa 4.0 Internasional.</a></p>
                 </div>
               </div>
             </div>
@@ -292,7 +292,7 @@ const KodeEtik = () => {
             <div className="bg-gray-50 rounded-xl p-8 mb-5">
               <div className="space-y-4 text-gray-700">
                 <div className="flex items-start">
-                  <i>Halaman ini dibuat dan terakhir disunting pada 16 September 2026, pukul 18:03 waktu UTC+7</i>
+                  <i>Halaman ini dibuat dan terakhir disunting pada 2 Oktober 2026, pukul 16:48 waktu UTC+7</i>
                 </div>
               </div>
             </div>
