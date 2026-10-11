@@ -17,7 +17,7 @@ Berikut ini merupakan kumpulan salindia (_slide_) pembicara openSUSE.Asia Summit
 1.	Andi Sugandi	- 	Securing Microservice Architectures with Traefik and CrowdSec on openSUSE Server
 1.	Anton Siswo Raharjo Ansori	- 	Stay Safe while Stay Secure and Stay Compliance
 1.	[Arrizal Yuwana	- 	Building a Campus Cloud with Clientless VM Access: Proxmox VE, Guacamole, RBAC, and Tailscale](https://opensuse.github.io/slides/presentations/opensuse-asia-summit-2026-building-a-campus-cloud-with-clientless-vm-ac-arrizal-yuwana.pdf)
-1.	Bambang Purnomosidi Dwi Putranto	- 	openSUSE Leap Server as an Ideal Platform for Enterprise Data Lakehouse
+1.	[Bambang Purnomosidi Dwi Putranto	- 	openSUSE Leap Server as an Ideal Platform for Enterprise Data Lakehouse](https://opensuse.github.io/slides/presentations/opensuse-asia-summit-2026-opensuse-leap-server-as-an-ideal-platform-for-bambang-purnomosidi-dwi-putran.pdf)
 1.	Bayu Putra Herlambang	- 	Building Resilient Networks with OpenMPTCProuter for Disaster Recovery
 1.	[Darian Rizaludin	- 	Demystifying Server Security: A Beginner-Friendly Intro to Wazuh and openSUSE Leap 16](https://opensuse.github.io/slides/presentations/opensuse-asia-summit-2026-demystifying-server-security-a-beginner-frien-darian-rizaludin.pdf)
 1.	Dhantel Rhesa Prawedha	- 	Building a Personal Multi-Tenant Web Hosting Server with openSUSE Leap 16.0
@@ -56,8 +56,8 @@ Berikut ini merupakan kumpulan salindia (_slide_) pembicara openSUSE.Asia Summit
 1.	[Rio Wiraldhani	- 	Practical Vulnerability Management on openSUSE with Wazuh](https://opensuse.github.io/slides/presentations/opensuse-asia-summit-2026-practical-vulnerability-management-on-opensus-rio-wiraldhani.pdf)
 1.	[Rithull Raj Kallat & Divyanshu Prakash	- 	How openSUSE Works: Leap, Tumbleweed, OBS, openQA, and YaST](https://opensuse.github.io/slides/presentations/opensuse-asia-summit-2026-how-opensuse-works-rithull-raj-kallat.pdf)
 1.	[Robertus Diawan Chris	- 	Kickstart Linux Kernel Contribution by Fixing Coverity Issue](https://opensuse.github.io/slides/presentations/opensuse-asia-summit-2026-kickstart-linux-kernel-contribution-by-fixing-robertus-diawan-chris.pdf)
-1.	Sendy Aditya Suryana	- 	From Steam to Epic: A Practical Guide to Linux Gaming
-1.	Shobha Tyagi	- 	Open Source and the Future of Innovation 
+1.	[Sendy Aditya Suryana	- 	From Steam to Epic: A Practical Guide to Linux Gaming](https://opensuse.github.io/slides/presentations/opensuse-asia-summit-2026-year-of-linux-gaming-from-steam-to-epic-a-pra-sendy-aditya-suryana.pdf)
+1.	[Shobha Tyagi	- 	Open Source and the Future of Innovation](https://opensuse.github.io/slides/presentations/opensuse-asia-summit-2026-open-source-the-future-of-innovation-shobha-tyagi.pdf)
 1.	Simon Lees	- 	An Introduction to openSUSE Packaging using Git and OBS
 1.	[Sk Izaz Ahmed	- 	Common Linux Beginner Mistakes — and How to Avoid Them](https://opensuse.github.io/slides/presentations/opensuse-asia-summit-2026-i-don-t-know-what-i-just-ran-a-beginner-s-gui-sk-izaz-ahmed.pdf)
 1.	Sunny 	- 	Leadership in the Open Source Community
